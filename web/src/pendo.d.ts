@@ -7,8 +7,11 @@ declare global {
   interface PendoAgent {
     track?: (name: string, props?: Record<string, unknown>) => void;
     initialize?: (config: Record<string, unknown>) => void;
+    identify?: (config: Record<string, unknown>) => void;
+    clearSession?: () => void;
   }
   interface Window {
     pendo?: PendoAgent;
   }
+  var pendo: any;
 }
