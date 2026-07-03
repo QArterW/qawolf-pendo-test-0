@@ -38,5 +38,5 @@ app.post("/api/reset", (_req, res) => {
 
 const PORT = Number(process.env.PORT) || 3001;
 app.listen(PORT, () => {
-  console.log(`API listening on http://localhost:${PORT}`);
+  console.log(`API listening on port ${PORT}`);
 });
