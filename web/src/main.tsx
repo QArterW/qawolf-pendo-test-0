@@ -3,10 +3,10 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 
 function getOrCreateVisitorId(): string {
-  const key = "pendo_visitor_id";
+  const key = "novus_visitor_id";
   let id = localStorage.getItem(key);
   if (!id) {
-    id = `visitor-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
+    id = crypto.randomUUID();
     localStorage.setItem(key, id);
   }
   return id;
