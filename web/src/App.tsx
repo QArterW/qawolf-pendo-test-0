@@ -50,6 +50,9 @@ export default function App() {
         <button data-testid="btn-reset" onClick={() => run("reset", api.reset)}>
           Reset
         </button>
+        <button data-testid="btn-double" onClick={() => run("double", api.double)}>
+          Double
+        </button>
         <button data-testid="btn-refresh" onClick={() => run("refresh", api.getState)}>
           Refresh
         </button>

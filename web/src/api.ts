@@ -18,4 +18,5 @@ export const api = {
   increment: () => call("/api/increment", "POST"),
   decrement: () => call("/api/decrement", "POST"),
   reset: () => call("/api/reset", "POST"),
+  double: () => call("/api/double", "POST"),
 };
