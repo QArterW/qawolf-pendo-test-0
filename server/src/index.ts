@@ -36,6 +36,12 @@ app.post("/api/reset", (_req, res) => {
   res.json(state());
 });
 
+app.post("/api/multiply", (_req, res) => {
+  counter *= 2;
+  lastAction = "multiply";
+  res.json(state());
+});
+
 const PORT = Number(process.env.PORT) || 3001;
 app.listen(PORT, () => {
   console.log(`API listening on port ${PORT}`);
