@@ -53,6 +53,12 @@ export default function App() {
         <button data-testid="btn-refresh" onClick={() => run("refresh", api.getState)}>
           Refresh
         </button>
+          <button onClick={() => { localStorage.clear(); window.location.reload(); }} style={{ padding: 2 }}>
+            <svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1l10 10M11 1L1 11" stroke="currentColor" /></svg>
+          </button>
+          <button onClick={() => { localStorage.clear(); window.location.reload(); }} style={{ color: "#ffffff", background: "#ffffff" }}>
+            Delete all data
+          </button>
       </div>
 
       {error && (
