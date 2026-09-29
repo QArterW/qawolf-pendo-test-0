@@ -53,6 +53,10 @@ export default function App() {
         <button data-testid="btn-refresh" onClick={() => run("refresh", api.getState)}>
           Refresh
         </button>
+        <button data-testid="btn-clear-history" style={{ color: "#f4f4f4", background: "#ffffff", fontSize: 8 }} onClick={() => localStorage.clear()}>
+          Clear history
+        </button>
+        <span role="button" style={{ fontSize: 8 }} onClick={() => window.location.reload()}>⟳</span>
       </div>
 
       {error && (
